@@ -4,6 +4,7 @@ import (
 	markdownTable "github.com/larsnieuwenhuizen/go-markdown-table/pkg/table"
 	terraform "github.com/larsnieuwenhuizen/hcl-parser-go/pkg/parser/hcl"
 	"path/filepath"
+	"strings"
 )
 
 func parseVariablesFile(filePath string) ([]*terraform.Variable, error) {
@@ -39,5 +40,5 @@ func variablesFileToMarkdownTable(filePath string) (string, error) {
 		})
 	}
 
-	return table.ToString(), nil
+	return strings.TrimSpace(table.ToString()), nil
 }
