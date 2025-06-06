@@ -1,7 +1,5 @@
 # HCL Documenter
 
----
-
 [![Tests](https://github.com/LarsNieuwenhuizen/hcl-documenter-go/actions/workflows/test.yml/badge.svg)](https://github.com/LarsNieuwenhuizen/hcl-documenter-go/actions/workflows/test.yml)
 
 This application parses HCL files and generates documentation in Markdown format.
