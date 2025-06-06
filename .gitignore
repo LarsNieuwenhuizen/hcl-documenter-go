@@ -1,3 +1,4 @@
 .env.local
 .idea
 *.tf
+!pkg/*/testdata/*.tf
