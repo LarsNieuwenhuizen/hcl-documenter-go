@@ -1,0 +1,7 @@
+name: Build and Release
+on:
+  workflow_dispatch:
+
+jobs:
+  version:
+    uses: LarsNieuwenhuizen/workflows/.github/workflows/build-and-release-go.yml@feat/go-build-release-workflow
