@@ -3,12 +3,5 @@ on:
   workflow_dispatch:
 
 jobs:
-  version:
+  build-release:
     uses: LarsNieuwenhuizen/workflows/.github/workflows/build-and-release-go.yml@feat/go-build-release-workflow
-
-  use-version:
-    needs: version
-    runs-on: ubuntu-latest
-    steps:
-      - name: Use version
-        run: echo "Using version ${{ needs.version.outputs.result }}"
