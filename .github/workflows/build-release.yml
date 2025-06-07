@@ -1,10 +1,17 @@
 name: Build and Release
+
 on:
   workflow_dispatch:
+  pull_request:
+    types:
+      - closed
 
 permissions:
   contents: write
 
 jobs:
   build-release:
-    uses: LarsNieuwenhuizen/workflows/.github/workflows/build-and-release-go.yml@feat/go-build-release-workflow
+    if: github.event.pull_request.merged == true
+    uses: LarsNieuwenhuizen/workflows/.github/workflows/build-and-release-go.yml@main
+    with:
+      app-name: hcl-documenter
