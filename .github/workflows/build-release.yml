@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Use version
-        run: echo "Using version ${{ needs.version.outputs.release_version }}"
+        run: echo "Using version ${{ needs.version.outputs.result }}"
