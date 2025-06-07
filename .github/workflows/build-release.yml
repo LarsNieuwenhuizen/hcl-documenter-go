@@ -2,6 +2,9 @@ name: Build and Release
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build-release:
     uses: LarsNieuwenhuizen/workflows/.github/workflows/build-and-release-go.yml@feat/go-build-release-workflow
