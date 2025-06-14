@@ -26,7 +26,6 @@ sudo mv hcldoc /usr/local/bin
 
 Then you can run the binary and see something like this:
 
-```shell
 > hcldoc
 
 Use this app to document your terraform files
@@ -52,7 +51,7 @@ You can use the `variables-file` command to convert a variables file to a markdo
 Example:
 
 ```shell
-> hcldoc vf -f /path/to/variables.tf
+> hcldoc vf /path/to/variables.tf
 
 | Name | Type | Description         | Default |
 |------|------|---------------------|---------|
