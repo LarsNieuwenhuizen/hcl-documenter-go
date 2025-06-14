@@ -1,20 +1,35 @@
 package variable_files
 
 import (
+	"errors"
 	markdownTable "github.com/larsnieuwenhuizen/go-markdown-table/pkg/table"
 	terraform "github.com/larsnieuwenhuizen/hcl-parser-go/pkg/parser/hcl"
+	"os"
 	"path/filepath"
 	"strings"
 )
 
+var ErrFileNotExist = errors.New("file does not exist")
+
 func parseVariablesFile(filePath string) ([]*terraform.Variable, error) {
 	file := []string{filepath.Clean(filePath)}
-	config, err := terraform.Parse([]string{}, file)
-	if err != nil {
+	if err := doesFileExist(filePath); err != nil {
 		return nil, err
 	}
 
-	return config.Variables, nil
+	config, err := terraform.Parse([]string{}, file)
+
+	return config.Variables, err
+}
+
+func doesFileExist(filePath string) error {
+	_, err := os.Stat(filePath)
+
+	if os.IsNotExist(err) {
+		return ErrFileNotExist
+	}
+
+	return nil
 }
 
 func variablesFileToMarkdownTable(filePath string) (string, error) {
