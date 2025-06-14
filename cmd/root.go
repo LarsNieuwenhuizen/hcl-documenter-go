@@ -7,7 +7,7 @@ import (
 
 func RootCmd() *cobra.Command {
 	rootCmd := &cobra.Command{
-		Use:   "hcl-doc",
+		Use:   "hcldoc",
 		Short: "Use this app to document your terraform files",
 	}
 
