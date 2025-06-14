@@ -8,6 +8,7 @@ import (
 func VariablesFileToMarkdownTableCommand() *cobra.Command {
 	command := &cobra.Command{
 		Use:     "variables-file",
+		Aliases: []string{"vf"},
 		Short:   "Convert variables file to markdown table",
 		Args:    cobra.ExactArgs(1),
 		Example: "test",
