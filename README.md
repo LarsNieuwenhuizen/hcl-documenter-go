@@ -12,9 +12,9 @@ The first feature here is to parse a variables file and generate a markdown tabl
 
 Download the release for your platform either linux or mac.
 
-Go to the [releases page](https://github.com/LarsNieuwenhuizen/hcl-documenter-go/releases/tag/v1.0.0)
+Go to the [releases page](https://github.com/LarsNieuwenhuizen/hcl-documenter-go/releases)
 
-Download the tar.gz file for your platform and extract it.
+Download the latest tar.gz file for your platform and extract it.
 
 Move it to a directory in your `$PATH`, for example `/usr/local/bin`:
 
