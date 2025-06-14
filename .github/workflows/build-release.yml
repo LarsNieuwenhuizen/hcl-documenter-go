@@ -14,4 +14,4 @@ jobs:
     if: ${{ github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch' }}
     uses: LarsNieuwenhuizen/workflows/.github/workflows/build-and-release-go.yml@main
     with:
-      app-name: hcl-documenter
+      app-name: hcldoc
