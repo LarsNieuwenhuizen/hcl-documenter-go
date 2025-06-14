@@ -18,4 +18,4 @@ jobs:
       uses: LarsNieuwenhuizen/workflows/.github/workflows/test-go.yml@main
       with:
         path: "github.com/larsnieuwenhuizen/hcl-documenter-go/pkg/variable_files"
-        project-name: "hcl-documenter"
+        name: "hcl-documenter"
